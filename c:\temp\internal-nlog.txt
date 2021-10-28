@@ -1,0 +1,44 @@
+2021-10-18 17:59:38.1023 Info Message Template Auto Format enabled
+2021-10-18 17:59:38.1517 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-18 17:59:38.2432 Info Adding target FileTarget(Name=allfile)
+2021-10-18 17:59:38.3632 Info Validating config: TargetNames=allfile, ConfigItems=21, FilePath=/Users/dogukan/Projects/PersonellerUoW/PersonellerUoW/bin/Debug/net5.0/nlog.config
+2021-10-18 18:01:29.3278 Info Message Template Auto Format enabled
+2021-10-18 18:01:29.3522 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-18 18:01:29.4229 Info Adding target FileTarget(Name=allfile)
+2021-10-18 18:01:29.5294 Info Validating config: TargetNames=allfile, ConfigItems=21, FilePath=/Users/dogukan/Projects/PersonellerUoW/PersonellerUoW/bin/Debug/net5.0/nlog.config
+2021-10-18 18:09:45.7737 Info Message Template Auto Format enabled
+2021-10-18 18:09:45.8007 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-18 18:09:45.8749 Info Adding target FileTarget(Name=allfile)
+2021-10-18 18:09:45.9555 Info Validating config: TargetNames=allfile, ConfigItems=21, FilePath=/Users/dogukan/Projects/PersonellerUoW/PersonellerUoW/bin/Debug/net5.0/nlog.config
+2021-10-18 18:10:53.4370 Info Message Template Auto Format enabled
+2021-10-18 18:10:53.4682 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-18 18:10:53.5341 Info Adding target FileTarget(Name=allfile)
+2021-10-18 18:10:53.6311 Info Validating config: TargetNames=allfile, ConfigItems=21, FilePath=/Users/dogukan/Projects/PersonellerUoW/PersonellerUoW/bin/Debug/net5.0/nlog.config
+2021-10-18 18:13:22.9650 Info Message Template Auto Format enabled
+2021-10-18 18:13:23.0289 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-18 18:13:23.1391 Info Adding target FileTarget(Name=allfile)
+2021-10-18 18:13:23.2322 Info Validating config: TargetNames=allfile, ConfigItems=21, FilePath=/Users/dogukan/Projects/PersonellerUoW/PersonellerUoW/bin/Debug/net5.0/nlog.config
+2021-10-18 18:14:39.2267 Info Message Template Auto Format enabled
+2021-10-18 18:14:39.2827 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-18 18:14:39.4072 Info Adding target FileTarget(Name=allfile)
+2021-10-18 18:14:39.5223 Info Validating config: TargetNames=allfile, ConfigItems=21, FilePath=/Users/dogukan/Projects/PersonellerUoW/PersonellerUoW/bin/Debug/net5.0/nlog.config
+2021-10-19 09:54:54.4607 Info Message Template Auto Format enabled
+2021-10-19 09:54:54.4848 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-19 09:54:54.5554 Info Adding target FileTarget(Name=allfile)
+2021-10-19 09:54:54.6144 Info Validating config: TargetNames=allfile, ConfigItems=21, FilePath=/Users/dogukan/Projects/PersonellerUoW/PersonellerUoW/bin/Debug/net5.0/nlog.config
+2021-10-19 09:56:23.2685 Info Message Template Auto Format enabled
+2021-10-19 09:56:23.3022 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-19 09:56:23.4090 Info Adding target FileTarget(Name=allfile)
+2021-10-19 09:56:23.5136 Info Validating config: TargetNames=allfile, ConfigItems=21, FilePath=/Users/dogukan/Projects/PersonellerUoW/PersonellerUoW/bin/Debug/net5.0/nlog.config
+2021-10-19 09:58:24.2161 Info Message Template Auto Format enabled
+2021-10-19 09:58:24.2474 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-19 09:58:24.3250 Info Adding target FileTarget(Name=allfile)
+2021-10-19 09:58:24.4077 Info Validating config: TargetNames=allfile, ConfigItems=21, FilePath=/Users/dogukan/Projects/PersonellerUoW/PersonellerUoW/bin/Debug/net5.0/nlog.config
+2021-10-19 10:04:00.7974 Info Message Template Auto Format enabled
+2021-10-19 10:04:00.8325 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-19 10:04:00.9186 Info Adding target FileTarget(Name=allfile)
+2021-10-19 10:04:01.0203 Info Validating config: TargetNames=allfile, ConfigItems=21, FilePath=/Users/dogukan/Projects/PersonellerUoW/PersonellerUoW/bin/Debug/net5.0/nlog.config
+2021-10-19 11:23:06.6702 Info Message Template Auto Format enabled
+2021-10-19 11:23:06.6961 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-19 11:23:06.7786 Info Adding target FileTarget(Name=allfile)
+2021-10-19 11:23:06.8795 Info Validating config: TargetNames=allfile, ConfigItems=21, FilePath=/Users/dogukan/Projects/PersonellerUoW/PersonellerUoW/bin/Debug/net5.0/nlog.config

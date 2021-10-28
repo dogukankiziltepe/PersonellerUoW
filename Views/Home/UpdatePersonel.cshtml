@@ -1,0 +1,101 @@
+﻿@model PersonellerUoW.Models.PersonelViewModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<form asp-controller="Home" asp-action="UpdatePersonel" method="post" enctype="multipart/form-data">
+    <div class="row">
+        <label asp-for="Media">Medya</label>
+        @if (Model.MediaUrl != null)
+        {
+            <img height="200" width="200" src="@Url.Content(@Model.MediaUrl)" />
+        }
+        <input asp-for="Media" type="file" />
+    </div>
+    <div>
+        <div>
+            <label asp-for="PersonelID">@Model.PersonelID</label>
+            <input type="number" disabled="1" value="@Model.PersonelID" />
+            <label asp-for="Name">İsim</label>
+            <input asp-for="Name" value="@Model.Name" />
+            <span asp-validation-for="Name"></span>
+            <label asp-for="Surname">Soyad</label>
+            <input asp-for="Surname" value="@Model.Surname" />
+            <span asp-validation-for="Surname"></span>
+        </div>
+
+        <div>
+            <label asp-for="Gender" />
+            <input id="man" asp-for="Gender" value="false" type="radio" />
+            <label>Erkek</label>
+            <input id="woman" asp-for="Gender" value="true" type="radio" />
+            <label>Kadın</label>
+            <span asp-validation-for="Gender"></span>
+        </div>
+
+        <div>
+            <select asp-for="Country.ID" id="countryselect" onchange="cityFiltering()">
+                @foreach (var country in ViewBag.Countries)
+                {
+                    <option value="@country.ID">@country.Name</option>
+                }
+            </select>
+            <span asp-validation-for="Country"></span>
+            <select asp-for="City.ID" id="cities">
+                <option value="@Model.City.ID">@Model.City.Name</option>
+            </select>
+            <span asp-validation-for="City"></span>
+        </div>
+        <input value="@Model.DateOfBirth.ToString("yyyy-MM-dd")" asp-for="DateOfBirth" type="date" />
+        <span asp-validation-for="DateOfBirth"></span>
+        <input type="submit" class="btn btn-success" />
+    </div>
+
+</form>
+
+<script>
+    function cityFiltering() {
+        var element1 = document.getElementById("cities")
+        element1.innerHTML = ""
+        var viewbagcities = @Html.Raw(Json.Serialize(ViewBag.Cities));
+        var cities = []
+        for (var i = 0; i < viewbagcities.length; i++) {
+            cities[i] = viewbagcities[i];
+
+        }
+        country = document.getElementById("countryselect")
+        var selected = country.options[country.selectedIndex].value;
+        cities = cities.filter(x => x.ustID == selected)
+        for (var i = 0; i < cities.length; i++) {
+            var element = document.getElementById("cities")
+            var createdelement = document.createElement("option")
+            createdelement.setAttribute("value", cities[i].id)
+            var node = document.createTextNode(cities[i].name);
+            createdelement.appendChild(node)
+            element.appendChild(createdelement)
+        }
+    }
+    function valueChanged() {
+        if (document.getElementById("man").checked == true) {
+            document.getElementById("man").value = 1;
+            document.getElementById("woman").value = 0;
+        } else {
+            document.getElementById("man").value = 0;
+            document.getElementById("woman").value = 1;
+        }
+    }
+    function radioButtonValue() {
+        if (@Model.Gender === false) {
+            document.getElementById("man").value = 1;
+            document.getElementById("woman").value = 0;
+        }
+        else {
+            document.getElementById("woman").value = 1;
+            document.getElementById("man").value = 0;
+        }
+    }
+
+</script>
+<script>$(document).ready(radioButtonValue());</script>

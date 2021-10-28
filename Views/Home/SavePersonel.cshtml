@@ -1,0 +1,84 @@
+﻿@model PersonellerUoW.Models.PersonelViewModel
+    @namespace Personeller.Views.Home
+    @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+    <form asp-controller="Home" asp-action="SavePersonel" method="post" enctype="multipart/form-data">
+        <div class="container">
+            <div class="row">
+                <label asp-for="Media">Medya</label>
+                <input asp-for="Media" type="file" />
+            </div>
+            <br />
+            <div class="row">
+                <label asp-for="Name">İsim</label>
+                <input class="text" asp-for="Name" />
+                <span asp-validation-for="Name"></span>
+                <label asp-for="Surname">Soyad</label>
+                <input class="text" asp-for="Surname" />
+                <span asp-validation-for="Surname"></span>
+            </div>
+            <br />
+            <div class="row">
+                <label asp-for="Gender" />
+                <input id="man" asp-for="Gender" value="false" type="radio" />
+                <label class="form-check-label">Erkek</label>
+                <input id="woman" asp-for="Gender" value="true" type="radio" />
+                <label class="form-check-label">Kadın</label>
+                <span asp-validation-for="Gender"></span>
+            </div>
+            <br />
+            <div class="row">
+                <select asp-for="Country.ID" id="countryselect" onchange="cityFiltering()">
+                    <option id="0">Lütfen Ülke Seçini<</option>
+                    @foreach (var country in ViewBag.Countries)
+                    {
+                        <option value="@country.ID">@country.Name</option>
+                    }
+                </select>
+                <span asp-validation-for="Country"></span>
+                <select asp-for="City.ID" id="cities">
+                    <option value="0">Lütfen Şehir Seçiniz</option>
+                </select>
+                <span asp-validation-for="City"></span>
+            </div>
+            <br />
+            <div class="row">
+                <input asp-for="DateOfBirth" type="date" />
+                <span asp-validation-for="DateOfBirth"></span>
+            </div>
+
+            <input type="submit" class="btn btn-success" />
+        </div>
+    </form>
+    <script>
+        function cityFiltering() {
+            var element1 = document.getElementById("cities")
+            element1.innerHTML = ""
+            var viewbagcities = @Html.Raw(Json.Serialize(ViewBag.Cities));
+            var cities = []
+            for (var i = 0; i < viewbagcities.length; i++) {
+                cities[i] = viewbagcities[i];
+
+            }
+            country = document.getElementById("countryselect")
+            var selected = country.options[country.selectedIndex].value;
+            cities = cities.filter(x => x.ustID == selected)
+            for (var i = 0; i < cities.length; i++) {
+                var element = document.getElementById("cities")
+                var createdelement = document.createElement("option")
+                createdelement.setAttribute("value", cities[i].id)
+                var node = document.createTextNode(cities[i].name);
+                createdelement.appendChild(node)
+                element.appendChild(createdelement)
+            }
+        }
+        function valueChanged() {
+            if (document.getElementById("man").checked == true) {
+                document.getElementById("man").value = 1;
+                document.getElementById("woman").value = 0;
+            } else {
+                document.getElementById("man").value = 0;
+                document.getElementById("woman").value = 1;
+            }
+        }
+    </script>
